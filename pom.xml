@@ -6,7 +6,8 @@
 
     <groupId>com.katalon</groupId>
     <artifactId>testops-testng-sample</artifactId>
-    <version>0.0.1</version>
+    <name>TestOps TestNG Sample</name>
+    <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -16,7 +17,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <testng-version>7.3.0</testng-version>
-        <testops-testng-version>0.0.1-SNAPSHOT</testops-testng-version>
+        <testops-testng-version>1.0.0</testops-testng-version>
     </properties>
 
     <repositories>
@@ -44,5 +45,21 @@
             <version>${testops-testng-version}</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/calculator-suite.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
