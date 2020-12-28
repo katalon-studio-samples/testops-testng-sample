@@ -1,9 +1,8 @@
-name: Publish release package
+name: Run test
 
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    - cron:  '0 */6 * * *'
 
 jobs:
   publish:
