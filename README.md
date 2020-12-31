@@ -1,4 +1,4 @@
-# Testops TestNG
+# TestOps TestNG
 https://github.com/katalon-studio/testops-testng
 
 # Run test
