@@ -27,8 +27,8 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
 
       - name: Run test
-        env:
-          TESTOPS_BASE_PATH: https://testops.staging.katalon.com
-          TESTOPS_APIKEY: ${{ secrets.TESTOPS_API_KEY }}
-          TESTOPS_PROJECT_ID: 68607
-        run: mvn clean test -Dtestng.dtd.http=true
+        run: |
+          mvn clean test -Dtestng.dtd.http=true \
+            -Dtestops.apiKey=${{ secrets.TESTOPS_API_KEY }} \
+            -Dtestops.serverUrl=https://testops.staging.katalon.com \
+            -Dtestops.projectId=68607
