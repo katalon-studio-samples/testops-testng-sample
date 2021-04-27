@@ -16,4 +16,9 @@
             <class name="com.katalon.testops.CalculatorTestNGTest"/>
         </classes>
     </test>
+    <test name="Calculator Assert Failed">
+        <classes>
+            <class name="com.katalon.testops.CalculatorAssertFailedTestNGTest"/>
+        </classes>
+    </test>
 </suite>
