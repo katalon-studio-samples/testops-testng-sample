@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <testng-version>7.3.0</testng-version>
+        <testng-version>7.7.1</testng-version>
         <testops-testng-version>LATEST</testops-testng-version>
     </properties>
 
